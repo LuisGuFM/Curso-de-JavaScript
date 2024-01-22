@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+</head>
+<body>
+    <h1>Sistema de Residentes</h1>
+    <p>Voce reside em qual pais?</p> <br>
+    <input type="text" name="pais" id="paisi">
+    <input type="button" value="Verificar" onclick="verificador()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificador() {
+            var pais = document.getElementById('paisi')
+            var res = document.getElementById('res')
+            var paisverificar = pais.value
+            if (paisverificar == 'Brasil') {
+                res.innerHTML = `Voce e Brasileiro!`
+            } else {
+                res.innerHTML = `Voce e Estrangeiro!`
+            }
+        } 
+    </script>
+
+</body>
+</html>
